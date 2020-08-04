@@ -1,5 +1,6 @@
 ### 小白视频教程文档
 
+
 #### 前言
 
 1：让完全不懂程序开发的小白如何几小时内学会量化交易？
@@ -40,6 +41,7 @@ nano hello.php
 echo "hellow world";
 ```
 
+[视频地址:https://www.bilibili.com/video/BV1FK411n7SB/](https://www.bilibili.com/video/BV1FK411n7SB/)
 
 ### 二：如何获取交易所盘口数据和下单命令
 
@@ -66,7 +68,7 @@ file_get_contents();
 
 创建demo.php 和 lib.php
 
-
+[视频地址:https://www.bilibili.com/video/BV1pp4y1q7mC/](https://www.bilibili.com/video/BV1pp4y1q7mC/)
 
 ### 三：如何完成一个简单定投策略
 
@@ -89,9 +91,7 @@ echo date('Y-m-d H:i:s',$time);
 
 3：如何知道自己的程序有没有执行？下单成功后是否记录？
 
-
-
-
+[视频地址:https://www.bilibili.com/video/BV1Pp4y1q72A/](https://www.bilibili.com/video/BV1Pp4y1q72A/)
 
 ### 四：如何根据盘口行情进行下单策略
 
