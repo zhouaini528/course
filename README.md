@@ -20,7 +20,6 @@
 #先更新系统
 apt-get update
 
-
 #安装系统php
 apt-get install php7.4 php7.4-curl
 
@@ -38,7 +37,7 @@ nano hello.php
 输入以下代码
 ```php script
 <?php
-echo “hellow world”;
+echo "hellow world";
 ```
 
 
@@ -46,7 +45,11 @@ echo “hellow world”;
 
 1：选择数字货币哪家交易所？
 
-Huobi okex  binacne
+[Huobi](https://github.com/zhouaini528/huobi-php)
+
+[Okex](https://github.com/zhouaini528/okex-php)
+
+[Binance](https://github.com/zhouaini528/binance-php)
 
 2：如何获取盘口行情数据？
 
@@ -61,7 +64,7 @@ file_get_contents();
 
 火币官方 Sdk [https://github.com/huobiapi/REST-PHP-demo](https://github.com/huobiapi/REST-PHP-demo)
 
-
+创建demo.php 和 lib.php
 
 
 
@@ -76,17 +79,15 @@ sleep(60*60*6);
 
 2：某一时刻定投，比如每天12:30点准时定投，相隔24小时
 
-
-3：如何知道自己的程序有没有执行？下单成功后是否记录？
-
 ```php
 //php自带时间函数
 $time=time();
 
 //php自带格式化函数
-echo date(‘Y-m-d H:i:s’,$time);
+echo date('Y-m-d H:i:s',$time);
 ```
 
+3：如何知道自己的程序有没有执行？下单成功后是否记录？
 
 
 
