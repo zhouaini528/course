@@ -58,6 +58,12 @@ echo "hellow world";
 ```php
 //php自带的远程获取数据函数
 file_get_contents();
+
+//完整代码  每2秒获取一次
+while(1){
+    print_r(file_get_contents('https://api.huobi.pro/market/depth?symbol=btcusdt&type=step2&depth=5'));
+    sleep(2);
+}
 ```
 
 3：如何下单？
@@ -68,6 +74,21 @@ file_get_contents();
 
 创建demo.php 和 lib.php
 
+```php
+//定义参数
+define('ACCOUNT_ID', '11046977'); // your account ID 
+define('ACCESS_KEY','347eb106-87db8074-83adcc7b-xxxxxxx'); // your ACCESS_KEY
+define('SECRET_KEY', '44559ed2-xxxxxxx-42dbede5-xxxxxx'); // your SECRET_KEY
+
+include "lib.php";
+
+//实例化类库
+$req = new req();
+
+//下单方式
+print_r($req->place_order(11046977,5,7,'eosusdt','sell-limit'));
+```
+
 [视频地址:https://www.bilibili.com/video/BV1pp4y1q7mC/](https://www.bilibili.com/video/BV1pp4y1q7mC/)
 
 ### 三：如何完成一个简单定投策略
@@ -77,6 +98,19 @@ file_get_contents();
 ```php
 //php自带函数 默认秒单位
 sleep(60*60*6);
+
+//完整代码
+define('ACCOUNT_ID', '11046977'); // your account ID 
+define('ACCESS_KEY','347eb106-87db8074-83adcc7b-xxxxxxx'); // your ACCESS_KEY
+define('SECRET_KEY', '44559ed2-xxxxxxx-42dbede5-xxxxxx'); // your SECRET_KEY
+include "lib.php";
+$req = new req();
+while(1){
+    print_r($req->place_order(11046977,5,7,'eosusdt','sell-limit'));
+    //每6个小时定投
+    sleep(60*60*6);
+    //sleep(10);
+}
 ```
 
 2：某一时刻定投，比如每天12:30点准时定投，相隔24小时
@@ -90,6 +124,35 @@ echo date('Y-m-d H:i:s',$time);
 ```
 
 3：如何知道自己的程序有没有执行？下单成功后是否记录？
+
+```php
+//完整代码
+define('ACCOUNT_ID', '11046977'); // your account ID 
+define('ACCESS_KEY','347eb106-87db8074-83adcc7b-xxxxxxx'); // your ACCESS_KEY
+define('SECRET_KEY', '44559ed2-xxxxxxx-42dbede5-xxxxxx'); // your SECRET_KEY
+include "lib.php";
+$req = new req();
+while(1){
+    $time=time()+8*3600;
+    $start=1596446400;
+
+    if($time>$start){
+        $t=$time-$start;
+        //如果要24小时执行
+        //if(is_int($t/86400)){
+
+        //方便测试每10秒执行一次
+        if(is_int($t/10)){
+            print_r($req->place_order(11046977,5,7,'eosusdt','sell-limit'));
+            echo '开仓：'.date('Y-m-d H:i:s',$time).PHP_EOL;
+        }
+    }
+
+    //echo $time.PHP_EOL;
+    echo date('Y-m-d H:i:s',$time).PHP_EOL;
+    sleep(1);
+}
+```
 
 [视频地址:https://www.bilibili.com/video/BV1Pp4y1q72A/](https://www.bilibili.com/video/BV1Pp4y1q72A/)
 
