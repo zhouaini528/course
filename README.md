@@ -56,7 +56,7 @@ echo "hellow world";
 2：如何获取盘口行情数据？
 
 ```php
-//php自带的函数
+//php自带的远程获取数据函数
 file_get_contents();
 ```
 
