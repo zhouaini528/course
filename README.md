@@ -160,7 +160,75 @@ while(1){
 
 1：简单的根据盘口数据开仓
 
-2：开仓后如何盈利10%后平仓。   
+```php
+//PHP自带json解析函数
+json_decode();
+
+//完整代码
+define('ACCOUNT_ID', '11046977'); // your account ID 
+define('ACCESS_KEY','347eb106-87db8074-83adcc7b-xxxxxxx'); // your ACCESS_KEY
+define('SECRET_KEY', '44559ed2-xxxxxxx-42dbede5-xxxxxx'); // your SECRET_KEY
+include "lib.php";
+$req = new req();
+
+while(1){
+    $depth=file_get_contents('https://api.huobi.pro/market/depth?symbol=eosusdt&type=step2&depth=5');
+    $depth=json_decode($depth,true);
+    
+    $buy=$depth['tick']['bids'][0][0];
+    $sell=$depth['tick']['asks'][0][0];
+
+    echo 'buy:'.$buy.PHP_EOL;
+    echo 'sell:'.$sell.PHP_EOL;
+
+    sleep(2);
+}
+```
+
+2：开仓后如何盈利10%后平仓。
+
+```php
+//完整代码
+define('ACCOUNT_ID', '11046977'); // your account ID 
+define('ACCESS_KEY','347eb106-87db8074-83adcc7b-xxxxxxx'); // your ACCESS_KEY
+define('SECRET_KEY', '44559ed2-xxxxxxx-42dbede5-xxxxxx'); // your SECRET_KEY
+include "lib.php";
+$req = new req();
+
+$tag=0;
+$my_buy=3;
+$my_count=10;
+$my_sell=$my_buy*1.1;
+
+while(1){
+    $depth=file_get_contents('https://api.huobi.pro/market/depth?symbol=eosusdt&type=step2&depth=5');
+    $depth=json_decode($depth,true);
+
+    $buy=$depth['tick']['bids'][0][0];
+    $sell=$depth['tick']['asks'][0][0];
+
+    echo 'buy:'.$buy.PHP_EOL;
+    echo 'sell:'.$sell.PHP_EOL;
+
+    //sell buy 为了测试的变量
+    $sell=2;
+    $buy=4;
+
+    if($buy>=$my_sell && $tag ==1){
+        print_r($req->place_order(11046977,$my_count,$my_sell,'eosusdt','sell-limit'));
+        echo '平仓成功'.PHP_EOL;
+        break;
+    }
+
+    if($sell <= $my_buy &&  $tag==0){
+        print_r($req->place_order(11046977,$my_count,$my_buy,'eosusdt','buy-limit'));
+        $tag=1;
+        echo '开仓成功'.PHP_EOL;
+    }
+
+    sleep(2);
+}
+```
 
 
 ### 五：如何让程序一直后台运行？
