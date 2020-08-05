@@ -195,9 +195,13 @@ define('SECRET_KEY', '44559ed2-xxxxxxx-42dbede5-xxxxxx'); // your SECRET_KEY
 include "lib.php";
 $req = new req();
 
+//标记是否开仓
 $tag=0;
+//购买价格
 $my_buy=3;
+//购买数据
 $my_count=10;
+//卖出价格
 $my_sell=$my_buy*1.1;
 
 while(1){
@@ -210,7 +214,7 @@ while(1){
     echo 'buy:'.$buy.PHP_EOL;
     echo 'sell:'.$sell.PHP_EOL;
 
-    //sell buy 为了测试的变量
+    //sell buy 为了测试的变量可删除
     $sell=2;
     $buy=4;
 
