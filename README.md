@@ -41,7 +41,7 @@ nano hello.php
 echo "hellow world";
 ```
 
-[视频地址:https://www.bilibili.com/video/BV1FK411n7SB/](https://www.bilibili.com/video/BV1FK411n7SB/)
+[视频地址:https://www.bilibili.com/video/BV1rk4y117TR?p=1](https://www.bilibili.com/video/BV1rk4y117TR?p=1)
 
 ### 二：如何获取交易所盘口数据和下单命令
 
@@ -89,7 +89,7 @@ $req = new req();
 print_r($req->place_order(11046977,5,7,'eosusdt','sell-limit'));
 ```
 
-[视频地址:https://www.bilibili.com/video/BV1pp4y1q7mC/](https://www.bilibili.com/video/BV1pp4y1q7mC/)
+[视频地址:https://www.bilibili.com/video/BV1rk4y117TR?p=2](https://www.bilibili.com/video/BV1rk4y117TR?p=2)
 
 ### 三：如何完成一个简单定投策略
 
@@ -154,7 +154,7 @@ while(1){
 }
 ```
 
-[视频地址:https://www.bilibili.com/video/BV1Pp4y1q72A/](https://www.bilibili.com/video/BV1Pp4y1q72A/)
+[视频地址:https://www.bilibili.com/video/BV1rk4y117TR?p=3](https://www.bilibili.com/video/BV1rk4y117TR?p=3)
 
 ### 四：如何根据盘口行情进行下单策略
 
@@ -233,9 +233,12 @@ while(1){
     sleep(2);
 }
 ```
+[视频地址:https://www.bilibili.com/video/BV1rk4y117TR?p=4](https://www.bilibili.com/video/BV1rk4y117TR?p=4)
 
 
-### 五：如何让程序一直后台运行？
+### 五：预先善其事必先利其器PHPstrom
 
-### 六：预先善其事必先利其器
+### 六：如何让程序一直后台运行？
+
+
 
