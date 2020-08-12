@@ -240,6 +240,14 @@ while(1){
 
 ### 五：预先善其事必先利其器PHPstrom
 
+1：下载安装windows版本phpstrom
+
+2：SSH远程命令连接工具、SFPT文件同步
+
+3：一些小技巧
+
+[视频地址:https://www.bilibili.com/video/BV1rk4y117TR?p=5](https://www.bilibili.com/video/BV1rk4y117TR?p=5)
+
 ### 六：如何让程序一直后台运行？
 
 
