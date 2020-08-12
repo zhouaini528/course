@@ -17,6 +17,8 @@
 
 2：一台服务器以及PHP应用软件
 
+购买服务器前建议你去领优惠券，也许还可以给你优惠点[点我领取](https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=xmsff8ku)
+
 ```shell script
 #先更新系统
 apt-get update
