@@ -244,7 +244,7 @@ while(1){
 
 2：SSH远程命令连接工具、SFPT文件同步
 
-3：一些小技巧
+3：一些小技巧，[想要更深入了解的，看看这里](https://www.bilibili.com/video/BV1G4411g7bG)
 
 [视频地址:https://www.bilibili.com/video/BV1rk4y117TR?p=5](https://www.bilibili.com/video/BV1rk4y117TR?p=5)
 
