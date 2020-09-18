@@ -250,5 +250,46 @@ while(1){
 
 ### 六：如何让程序一直后台运行？
 
+1：如何知道程序一直在执行？
+
+2：关闭了远程连接程序是否还会继续执行？
+
+3：安装supervisor
+
+```shell script
+#linux 自带的命令，查看文件变化
+tail -f
+
+#安装
+apt-get install supervisor
+#启动设定的守护进程
+supervisorctl start name:*
+#停止所有守护进程
+supervisorctl stop all
+#开启所有守护进程
+supervisorctl start all
+#所有守护进程状态
+supervisorctl status
+#添加了进程守护配置文件才需要启动。视频中讲解的改了代码要启动是可以不用的
+supervisorctl reload
+
+#进程守护配置用例
+[program:name]
+process_name=%(program_name)s_%(process_num)02d
+command=php /root/depth.php
+stdout_logfile=/root/depth.log
+```
+
+### 七：强大的[exchanges-php](https://github.com/zhouaini528/exchanges-php)全球排前的交易所集合SDK。
+
+1：如何安装exchanges-php？ composer 是什么？
+
+2：如何使用exchanges-php？
+
+
+
+
+
+
 
 
