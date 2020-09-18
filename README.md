@@ -291,6 +291,8 @@ while(1){
 }
 ```
 
+[视频地址:https://www.bilibili.com/video/BV1rk4y117TR?p=6](https://www.bilibili.com/video/BV1rk4y117TR?p=6)
+
 ### 七：强大的[exchanges-php](https://github.com/zhouaini528/exchanges-php)全球排前的交易所集合SDK。
 
 1：如何安装exchanges-php？ composer 是什么？
