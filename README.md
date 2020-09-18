@@ -295,9 +295,11 @@ while(1){
 
 ### 七：强大的[exchanges-php](https://github.com/zhouaini528/exchanges-php)全球排前的交易所集合SDK。
 
-1：如何安装exchanges-php？ composer 是什么？
+1：composer 是什么？
 
-2：如何使用exchanges-php？
+2：如何安装exchanges-php？ 如何使用？
+
+3：多个交易如何使用？
 
 
 
