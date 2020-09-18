@@ -280,6 +280,17 @@ command=php /root/depth.php
 stdout_logfile=/root/depth.log
 ```
 
+```php
+//安装supervisor后的行情代码
+//完整代码  每2秒获取一次
+while(1){
+    $depth=file_get_contents('https://api.huobi.pro/market/depth?symbol=btcusdt&type=step2&depth=5');
+    echo date('Y-m-d H:i:s',time()).PHP_EOL;
+    file_put_contents('/root/depth.txt',$depth);
+    sleep(2);
+}
+```
+
 ### 七：强大的[exchanges-php](https://github.com/zhouaini528/exchanges-php)全球排前的交易所集合SDK。
 
 1：如何安装exchanges-php？ composer 是什么？
